@@ -1,8 +1,8 @@
 (ns advofcode2024.1.core-test
   (:require
-   [clojure.test :refer :all]
    [advofcode2024.1.core :as core]
-   [clojure.java.io :as io]))
+   [clojure.java.io :as io]
+   [clojure.test :refer :all]))
 
 
 (def sample-input
@@ -13,15 +13,13 @@
    3   9
    3   3")
 
-
-(deftest total-distance
+(deftest total-distance-test
   (testing "Sample input"
     (is (= 1      (core/total-distance sample-input))))
   (testing "Actual input"
     (is (= 1189304 (core/total-distance (slurp (io/resource "1/input.txt")))))))
 
-
-(deftest similarity-score
+(deftest similarity-score-test
   (testing "Sample input"
     (is (= 31       (core/similarity-score sample-input))))
   (testing "Actual input"
