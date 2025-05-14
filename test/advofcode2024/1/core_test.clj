@@ -15,7 +15,7 @@
 
 (deftest total-distance-test
   (testing "Sample input"
-    (is (= 1      (core/total-distance sample-input))))
+    (is (= 11      (core/total-distance sample-input))))
   (testing "Actual input"
     (is (= 1189304 (core/total-distance (slurp (io/resource "1/input.txt")))))))
 
