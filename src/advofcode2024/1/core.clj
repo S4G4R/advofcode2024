@@ -3,7 +3,7 @@
 
 ;; Part 1
 
-(defn- lists
+(defn- parse
   [input]
   (->> (re-seq #"\d+" input)
        (map parse-long)
@@ -24,7 +24,7 @@
 
 (defn total-distance
   [input]
-  (->> (lists input)
+  (->> (parse input)
        (apply lists-distances)
        total-distance*))
 
@@ -44,7 +44,7 @@
 
 (defn similarity-score
   [input]
-  (->> (lists input)
+  (->> (parse input)
        ((juxt first #(appearance-count (second %))))
        (apply similarity-score*)))
 
