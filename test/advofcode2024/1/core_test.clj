@@ -21,6 +21,6 @@
 
 (deftest similarity-score-test
   (testing "Sample input"
-    (is (= 31       (core/similarity-score sample-input))))
+    (is (= 31       (core/total-similarity-score sample-input))))
   (testing "Actual input"
-    (is (= 24349736 (core/similarity-score (slurp (io/resource "1/input.txt")))))))
+    (is (= 24349736 (core/total-similarity-score (slurp (io/resource "1/input.txt")))))))
